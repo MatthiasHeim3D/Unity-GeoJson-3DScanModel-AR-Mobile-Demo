@@ -171,26 +171,26 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
             }
         }
 
-        public void SetObjectToSpawn(int objectIndex)
-        {
-            if (m_ObjectSpawner == null)
-            {
-                Debug.LogWarning("Menu Manager not configured correctly: no Object Spawner set.", this);
-            }
-            else
-            {
-                if (objectIndex < m_ObjectSpawner.objectPrefabs.Count)
-                {
-                    m_ObjectSpawner.spawnOptionIndex = objectIndex;
-                }
-                else
-                {
-                    Debug.LogWarning("Object Spawner not configured correctly: object index larger than number of Object Prefabs.", this);
-                }
-            }
+        //public void SetObjectToSpawn(int objectIndex)
+        //{
+        //    if (m_ObjectSpawner == null)
+        //    {
+        //        Debug.LogWarning("Menu Manager not configured correctly: no Object Spawner set.", this);
+        //    }
+        //    else
+        //    {
+        //        if (objectIndex < m_ObjectSpawner.objectPrefabs.Count)
+        //        {
+        //            m_ObjectSpawner.spawnOptionIndex = objectIndex;
+        //        }
+        //        else
+        //        {
+        //            Debug.LogWarning("Object Spawner not configured correctly: object index larger than number of Object Prefabs.", this);
+        //        }
+        //    }
 
-            HideMenu();
-        }
+        //    HideMenu();
+        //}
 
         void ShowMenu()
         {

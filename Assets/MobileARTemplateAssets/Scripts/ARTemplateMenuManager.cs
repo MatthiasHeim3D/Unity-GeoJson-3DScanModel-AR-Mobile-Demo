@@ -17,18 +17,18 @@ using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 /// </summary>
 public class ARTemplateMenuManager : MonoBehaviour
 {
-    [SerializeField]
-    [Tooltip("Button that opens the create menu.")]
-    Button m_CreateButton;
+    //[SerializeField]
+    //[Tooltip("Button that opens the create menu.")]
+    //Button m_CreateButton;
 
     /// <summary>
     /// Button that opens the create menu.
     /// </summary>
-    public Button createButton
-    {
-        get => m_CreateButton;
-        set => m_CreateButton = value;
-    }
+    //public Button createButton
+    //{
+    //    get => m_CreateButton;
+    //    set => m_CreateButton = value;
+    //}
 
     [SerializeField]
     [Tooltip("Button that deletes a selected object.")]
@@ -43,18 +43,18 @@ public class ARTemplateMenuManager : MonoBehaviour
         set => m_DeleteButton = value;
     }
 
-    [SerializeField]
-    [Tooltip("The menu with all the creatable objects.")]
-    GameObject m_ObjectMenu;
+    //[SerializeField]
+    //[Tooltip("The menu with all the creatable objects.")]
+    //GameObject m_ObjectMenu;
 
     /// <summary>
     /// The menu with all the creatable objects.
     /// </summary>
-    public GameObject objectMenu
-    {
-        get => m_ObjectMenu;
-        set => m_ObjectMenu = value;
-    }
+    //public GameObject objectMenu
+    //{
+    //    get => m_ObjectMenu;
+    //    set => m_ObjectMenu = value;
+    //}
 
     [SerializeField]
     [Tooltip("The modal with debug options.")]
@@ -69,18 +69,18 @@ public class ARTemplateMenuManager : MonoBehaviour
         set => m_ModalMenu = value;
     }
 
-    [SerializeField]
-    [Tooltip("The animator for the object creation menu.")]
-    Animator m_ObjectMenuAnimator;
+    //[SerializeField]
+    //[Tooltip("The animator for the object creation menu.")]
+    //Animator m_ObjectMenuAnimator;
 
     /// <summary>
     /// The animator for the object creation menu.
     /// </summary>
-    public Animator objectMenuAnimator
-    {
-        get => m_ObjectMenuAnimator;
-        set => m_ObjectMenuAnimator = value;
-    }
+    //public Animator objectMenuAnimator
+    //{
+    //    get => m_ObjectMenuAnimator;
+    //    set => m_ObjectMenuAnimator = value;
+    //}
 
     [SerializeField]
     [Tooltip("The object spawner component in charge of spawning new objects.")]
@@ -95,18 +95,18 @@ public class ARTemplateMenuManager : MonoBehaviour
         set => m_ObjectSpawner = value;
     }
 
-    [SerializeField]
-    [Tooltip("Button that closes the object creation menu.")]
-    Button m_CancelButton;
+    //[SerializeField]
+    //[Tooltip("Button that closes the object creation menu.")]
+    //Button m_CancelButton;
 
-    /// <summary>
-    /// Button that closes the object creation menu.
-    /// </summary>
-    public Button cancelButton
-    {
-        get => m_CancelButton;
-        set => m_CancelButton = value;
-    }
+    ///// <summary>
+    ///// Button that closes the object creation menu.
+    ///// </summary>
+    //public Button cancelButton
+    //{
+    //    get => m_CancelButton;
+    //    set => m_CancelButton = value;
+    //}
 
     [SerializeField]
     [Tooltip("The interaction group for the AR demo scene.")]
@@ -225,8 +225,8 @@ public class ARTemplateMenuManager : MonoBehaviour
     /// </summary>
     void OnEnable()
     {
-        m_CreateButton.onClick.AddListener(ShowMenu);
-        m_CancelButton.onClick.AddListener(HideMenu);
+        //m_CreateButton.onClick.AddListener(ShowMenu);
+        //m_CancelButton.onClick.AddListener(HideMenu);
         m_DeleteButton.onClick.AddListener(DeleteFocusedObject);
         m_PlaneManager.planesChanged += OnPlaneChanged;
     }
@@ -237,8 +237,8 @@ public class ARTemplateMenuManager : MonoBehaviour
     void OnDisable()
     {
         m_ShowObjectMenu = false;
-        m_CreateButton.onClick.RemoveListener(ShowMenu);
-        m_CancelButton.onClick.RemoveListener(HideMenu);
+        //m_CreateButton.onClick.RemoveListener(ShowMenu);
+        //m_CancelButton.onClick.RemoveListener(HideMenu);
         m_DeleteButton.onClick.RemoveListener(DeleteFocusedObject);
         m_PlaneManager.planesChanged -= OnPlaneChanged;
     }
@@ -294,7 +294,7 @@ public class ARTemplateMenuManager : MonoBehaviour
         else
         {
             m_IsPointerOverUI = false;
-            m_CreateButton.gameObject.SetActive(true);
+            //m_CreateButton.gameObject.SetActive(true);
             m_DeleteButton.gameObject.SetActive(m_InteractionGroup?.focusInteractable != null);
         }
 
@@ -309,35 +309,35 @@ public class ARTemplateMenuManager : MonoBehaviour
     /// This is effectively an override of the default behavior or randomly spawning an object.
     /// </summary>
     /// <param name="objectIndex">The index in the array of the object to spawn with the ObjectSpawner</param>
-    public void SetObjectToSpawn(int objectIndex)
-    {
-        if (m_ObjectSpawner == null)
-        {
-            Debug.LogWarning("Object Spawner not configured correctly: no ObjectSpawner set.");
-        }
-        else
-        {
-            if (m_ObjectSpawner.objectPrefabs.Count > objectIndex)
-            {
-                m_ObjectSpawner.spawnOptionIndex = objectIndex;
-            }
-            else
-            {
-                Debug.LogWarning("Object Spawner not configured correctly: object index larger than number of Object Prefabs.");
-            }
-        }
+    //public void SetObjectToSpawn(int objectIndex)
+    //{
+    //    if (m_ObjectSpawner == null)
+    //    {
+    //        Debug.LogWarning("Object Spawner not configured correctly: no ObjectSpawner set.");
+    //    }
+    //    else
+    //    {
+    //        if (m_ObjectSpawner.objectPrefabs.Count > objectIndex)
+    //        {
+    //            m_ObjectSpawner.spawnOptionIndex = objectIndex;
+    //        }
+    //        else
+    //        {
+    //            Debug.LogWarning("Object Spawner not configured correctly: object index larger than number of Object Prefabs.");
+    //        }
+    //    }
 
-        HideMenu();
-    }
+    //    HideMenu();
+    //}
 
     void ShowMenu()
     {
         m_ShowObjectMenu = true;
-        m_ObjectMenu.SetActive(true);
-        if (!m_ObjectMenuAnimator.GetBool("Show"))
-        {
-            m_ObjectMenuAnimator.SetBool("Show", true);
-        }
+        //m_ObjectMenu.SetActive(true);
+        //if (!m_ObjectMenuAnimator.GetBool("Show"))
+        //{
+        //    m_ObjectMenuAnimator.SetBool("Show", true);
+        //}
         AdjustARDebugMenuPosition();
     }
 
@@ -409,7 +409,7 @@ public class ARTemplateMenuManager : MonoBehaviour
     /// </summary>
     public void HideMenu()
     {
-        m_ObjectMenuAnimator.SetBool("Show", false);
+        //m_ObjectMenuAnimator.SetBool("Show", false);
         m_ShowObjectMenu = false;
         AdjustARDebugMenuPosition();
     }
@@ -434,15 +434,15 @@ public class ARTemplateMenuManager : MonoBehaviour
 
     void InitializeDebugMenuOffsets()
     {
-        if (m_CreateButton.TryGetComponent<RectTransform>(out var buttonRect))
-            m_ObjectButtonOffset = new Vector2(0f, buttonRect.anchoredPosition.y + buttonRect.rect.height + 10f);
-        else
-            m_ObjectButtonOffset = new Vector2(0f, 200f);
+        //if (m_CreateButton.TryGetComponent<RectTransform>(out var buttonRect))
+        //    m_ObjectButtonOffset = new Vector2(0f, buttonRect.anchoredPosition.y + buttonRect.rect.height + 10f);
+        //else
+        //    m_ObjectButtonOffset = new Vector2(0f, 200f);
 
-        if (m_ObjectMenu.TryGetComponent<RectTransform>(out var menuRect))
-            m_ObjectMenuOffset = new Vector2(0f, menuRect.anchoredPosition.y + menuRect.rect.height + 10f);
-        else
-            m_ObjectMenuOffset = new Vector2(0f, 345f);
+        //if (m_ObjectMenu.TryGetComponent<RectTransform>(out var menuRect))
+        //    m_ObjectMenuOffset = new Vector2(0f, menuRect.anchoredPosition.y + menuRect.rect.height + 10f);
+        //else
+        //    m_ObjectMenuOffset = new Vector2(0f, 345f);
     }
 
     void AdjustARDebugMenuPosition()
