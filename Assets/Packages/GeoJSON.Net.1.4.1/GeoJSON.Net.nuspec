@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>GeoJSON.Net</id>
+    <version>1.4.1</version>
+    <authors>Matt Hunt,Joerg Battermann,Xavier Fischer,Janus Weil</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <projectUrl>https://github.com/GeoJSON-Net/GeoJSON.Net</projectUrl>
+    <description>.Net types for the GeoJSON RFC to be used with Json.Net</description>
+    <copyright>Copyright © Joerg Battermann, Matt Hunt, Xavier Fischer, Janus Weil and Contributors, 2014 - 2024</copyright>
+    <tags>geojson geo json geolocation</tags>
+    <repository type="git" url="https://github.com/GeoJSON-Net/GeoJSON.Net.git" commit="bae25e5c68f37e86a7dc6f5985c409f7c631fdae" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.6.2">
+        <dependency id="Newtonsoft.Json" version="13.0.3" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net6.0">
+        <dependency id="Newtonsoft.Json" version="13.0.3" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net8.0">
+        <dependency id="Newtonsoft.Json" version="13.0.3" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Newtonsoft.Json" version="13.0.3" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.1">
+        <dependency id="Newtonsoft.Json" version="13.0.3" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>
