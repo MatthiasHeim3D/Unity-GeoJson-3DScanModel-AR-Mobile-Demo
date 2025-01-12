@@ -1,0 +1,163 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3183750513314442508
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6288434089261850750}
+  m_Layer: 0
+  m_Name: Roman Theatre of Dougga Tunisia with GeoJson
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6288434089261850750
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3183750513314442508}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.04005068, y: -0.11329573, z: -0.046431344}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1247580735992214869}
+  - {fileID: 2383593891630051648}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5241135564385812048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1247580735992214869}
+  - component: {fileID: 8030314576358869071}
+  m_Layer: 0
+  m_Name: GeoJsonVisualizer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1247580735992214869
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5241135564385812048}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.09, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6288434089261850750}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8030314576358869071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5241135564385812048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fccda64e04dd63144877f728e5764350, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  geoJsonFile: {fileID: 4900000, guid: 0fc6d5458acce7242b25be5b4bee02f2, type: 3}
+  pointPrefab: {fileID: 8221476299837017306, guid: b8cff87af7fd1bc4eb6e0b524220a099,
+    type: 3}
+  lineRendererPrefab: {fileID: 6190792817111989019, guid: 8bdc328846628de4cb7ee3a195f00725,
+    type: 3}
+--- !u!1001 &4353913445363544408
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6288434089261850750}
+    m_Modifications:
+    - target: {fileID: 2123463949358104600, guid: ec55d9409245c1443939f8282a8d8e39,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123463949358104600, guid: ec55d9409245c1443939f8282a8d8e39,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123463949358104600, guid: ec55d9409245c1443939f8282a8d8e39,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123463949358104600, guid: ec55d9409245c1443939f8282a8d8e39,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123463949358104600, guid: ec55d9409245c1443939f8282a8d8e39,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123463949358104600, guid: ec55d9409245c1443939f8282a8d8e39,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123463949358104600, guid: ec55d9409245c1443939f8282a8d8e39,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123463949358104600, guid: ec55d9409245c1443939f8282a8d8e39,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123463949358104600, guid: ec55d9409245c1443939f8282a8d8e39,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123463949358104600, guid: ec55d9409245c1443939f8282a8d8e39,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385046154839989866, guid: ec55d9409245c1443939f8282a8d8e39,
+        type: 3}
+      propertyPath: m_Name
+      value: Roman Theatre of Dougga Tunisia
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385046154839989866, guid: ec55d9409245c1443939f8282a8d8e39,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ec55d9409245c1443939f8282a8d8e39, type: 3}
+--- !u!4 &2383593891630051648 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2123463949358104600, guid: ec55d9409245c1443939f8282a8d8e39,
+    type: 3}
+  m_PrefabInstance: {fileID: 4353913445363544408}
+  m_PrefabAsset: {fileID: 0}
