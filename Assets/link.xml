@@ -1,0 +1,22 @@
+<linker>
+  <!-- Prevent stripping of GeoJSON.Net geometry and converters -->
+  <assembly fullname="GeoJSON.Net">
+    <type fullname="GeoJSON.Net.Converters.GeometryConverter" preserve="all" />
+    <type fullname="GeoJSON.Net.Converters.CrsConverter" preserve="all" />
+    <type fullname="GeoJSON.Net.Geometry.Point" preserve="all" />
+    <type fullname="GeoJSON.Net.Geometry.LineString" preserve="all" />
+    <type fullname="GeoJSON.Net.Geometry.MultiLineString" preserve="all" />
+    <type fullname="GeoJSON.Net.Geometry.MultiPolygon" preserve="all" />
+    <type fullname="GeoJSON.Net.Geometry.Position" preserve="all" />
+    <type fullname="GeoJSON.Net.Geometry.IPosition" preserve="all" />
+    <!-- Add more if you use them (e.g. Polygon, MultiPoint, etc.). -->
+  </assembly>
+
+  <!-- Prevent stripping of Newtonsoft.Json types used in the code -->
+  <assembly fullname="Newtonsoft.Json">
+    <type fullname="Newtonsoft.Json.JsonConverter" preserve="all" />
+    <type fullname="Newtonsoft.Json.Converters.StringEnumConverter" preserve="all" />
+    <type fullname="Newtonsoft.Json.JsonConvert" preserve="all" />
+    <!-- If you use more converters, add them here as well. -->
+  </assembly>
+</linker>
