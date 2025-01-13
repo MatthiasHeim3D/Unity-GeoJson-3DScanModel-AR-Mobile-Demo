@@ -1,6 +1,6 @@
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Rendering;
+using UnityEngine.UI;
 
 namespace Unity.AR.Companion.Mobile
 {

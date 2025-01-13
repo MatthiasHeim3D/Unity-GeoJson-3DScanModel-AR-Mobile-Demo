@@ -60,7 +60,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         [SerializeField]
         [Tooltip("List of materials and their associated shaders.")]
         List<ShaderContainer> m_ShaderContainers;
-        
+
         [SerializeField]
         [Tooltip("If true, the shaders will be refreshed automatically when the editor opens and when this scriptable object instance is enabled.")]
         bool m_AutoRefreshShaders = true;
@@ -108,7 +108,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                     info.material.shader = birpShader;
                     MarkMaterialModified(info.material);
                 }
-                else if (!isBuiltinRenderPipeline && srpShader != null && currentShader != srpShader )
+                else if (!isBuiltinRenderPipeline && srpShader != null && currentShader != srpShader)
                 {
                     info.material.shader = srpShader;
                     MarkMaterialModified(info.material);

@@ -1,10 +1,6 @@
-using GeoJSON.Net.Converters;
 using GeoJSON.Net.Feature;
 using GeoJSON.Net.Geometry;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-using System.Collections.Generic;
-using System.IO;
 using UnityEngine;
 
 public class GeoJsonVisualizer : MonoBehaviour
@@ -16,15 +12,26 @@ public class GeoJsonVisualizer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        var featureCollection = ParseGeoJsonFile(geoJsonFile);
+
+        if (featureCollection != null)
+            DisplayGeoJsonFeatures(featureCollection);
+    }
+
+    private FeatureCollection ParseGeoJsonFile(TextAsset geoJsonFile)
+    {
         if (geoJsonFile == null)
         {
             Debug.LogError($"GeoJSON file invalid!");
-            return;
+            return null;
         }
 
         string json = geoJsonFile.text;
-        FeatureCollection featureCollection = JsonConvert.DeserializeObject<FeatureCollection>(json);
+        return JsonConvert.DeserializeObject<FeatureCollection>(json);
+    }
 
+    private void DisplayGeoJsonFeatures(FeatureCollection featureCollection)
+    {
         GameObject pointsParent = new GameObject("Points");
         pointsParent.transform.SetParent(this.transform, false);
 
